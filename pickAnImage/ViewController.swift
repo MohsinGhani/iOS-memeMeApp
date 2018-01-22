@@ -14,19 +14,35 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
-
+    
+    let memeTextAttributes:[String:Any] = [
+        NSStrokeColorAttributeName: UIColor.black,
+        NSForegroundColorAttributeName: UIColor.white,
+        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        NSStrokeWidthAttributeName: 3]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         topTextField.delegate = self
         bottomTextField.delegate = self
+        
         topTextField.textAlignment = .center
         bottomTextField.textAlignment = .center
+        
+        topTextField.backgroundColor = UIColor.clear
+        bottomTextField.backgroundColor = UIColor.clear
+        
+        topTextField.defaultTextAttributes = memeTextAttributes
+        bottomTextField.defaultTextAttributes = memeTextAttributes
     }
     override func viewWillAppear(_ animated: Bool) {
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
     }
     
+    // this function will called when we start typing in text Field
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        // these conditions identify which text field is selected
         if textField.tag == 1 {
             topTextField.text = ""
         }
