@@ -120,7 +120,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     
+    @IBAction func shareImage(_ sender: UIBarButtonItem) {
+        let memedImage = generateMemedImage()
+
+        let vc = UIActivityViewController(activityItems: [topTextField.text!,bottomTextField.text!, memedImage], applicationActivities: nil)
+        present(vc, animated: true, completion: nil)
+    }
     
+    func generateMemedImage() -> UIImage {
+        
+        // TODO: Hide toolbar and navbar
+
+        // Render view to an image
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        // TODO: Show toolbar and navbar
+        
+        return memedImage
+    }
     
     
 }
