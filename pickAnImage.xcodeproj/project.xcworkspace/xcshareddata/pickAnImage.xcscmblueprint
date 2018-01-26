@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2C123F37A6E35D6C2601048BCE4BFC3C6F254152",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2C123F37A6E35D6C2601048BCE4BFC3C6F254152" : 9223372036854775807,
+    "33EFD7B09035A428966B1B5501B2A06BCAA79B53" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1FF581DF-8286-49DC-82D3-6C47DE463633",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2C123F37A6E35D6C2601048BCE4BFC3C6F254152" : "pickAnImage\/",
+    "33EFD7B09035A428966B1B5501B2A06BCAA79B53" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "pickAnImage",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "pickAnImage.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MohsinGhani\/iOS-memeMeApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2C123F37A6E35D6C2601048BCE4BFC3C6F254152"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MohsinGhani\/iOS-Apps.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "33EFD7B09035A428966B1B5501B2A06BCAA79B53"
+    }
+  ]
+}

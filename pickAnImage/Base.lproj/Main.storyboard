@@ -23,18 +23,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Wh-Vz-0uQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="579"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMV-Sp-TqH">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem title="Pick" id="Rjp-ey-BhB">
+                                    <barButtonItem image="menu" id="Rjp-ey-BhB">
+                                        <inset key="imageInsets" minX="0.0" minY="1" maxX="10" maxY="0.0"/>
                                         <connections>
                                             <action selector="pickAnImage:" destination="BYZ-38-t0r" id="aUQ-xY-JC8"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Camera" id="QH8-zb-ui7">
+                                    <barButtonItem image="camera" id="QH8-zb-ui7">
+                                        <inset key="imageInsets" minX="550" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <action selector="pickImageFromCamera:" destination="BYZ-38-t0r" id="9z2-p6-buz"/>
                                         </connections>
@@ -45,15 +47,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items/>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="7a7-Vl-QEp">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="7a7-Vl-QEp">
                                 <rect key="frame" x="66" y="114" width="243" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0XF-Xh-wLV"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="RVA-2W-TWm">
                                 <rect key="frame" x="66" y="503" width="243" height="50"/>
@@ -69,7 +71,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem id="uya-4L-pzZ">
-                                        <barButtonItem key="leftBarButtonItem" title="Share" id="fLF-A3-Wj5">
+                                        <barButtonItem key="leftBarButtonItem" image="share" id="fLF-A3-Wj5">
+                                            <inset key="imageInsets" minX="-15" minY="50" maxX="100" maxY="50"/>
                                             <connections>
                                                 <action selector="shareImage:" destination="BYZ-38-t0r" id="zJX-Ld-IF4"/>
                                             </connections>
@@ -81,9 +84,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4Wh-Vz-0uQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="0Hv-ec-Z5O"/>
                             <constraint firstItem="qad-WW-xIE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5Y4-sG-Erx"/>
                             <constraint firstItem="4Wh-Vz-0uQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="6wP-tZ-HAo"/>
+                            <constraint firstItem="4Wh-Vz-0uQ" firstAttribute="top" secondItem="MFD-HU-7l3" secondAttribute="bottom" id="BL4-pM-gza"/>
                             <constraint firstItem="MFD-HU-7l3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Cuu-wZ-DhX"/>
                             <constraint firstAttribute="trailing" secondItem="qad-WW-xIE" secondAttribute="trailing" id="Fkr-qP-TQh"/>
                             <constraint firstItem="7a7-Vl-QEp" firstAttribute="top" secondItem="qad-WW-xIE" secondAttribute="bottom" constant="70" id="HOm-hQ-t9d"/>
@@ -114,4 +117,9 @@
             <point key="canvasLocation" x="-98.400000000000006" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="32" height="32"/>
+        <image name="menu" width="32" height="32"/>
+        <image name="share" width="128" height="128"/>
+    </resources>
 </document>

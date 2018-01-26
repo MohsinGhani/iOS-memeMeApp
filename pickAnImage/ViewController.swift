@@ -14,12 +14,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
-    
+
     let memeTextAttributes:[String:Any] = [
         NSStrokeColorAttributeName: UIColor.black,
         NSForegroundColorAttributeName: UIColor.white,
         NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSStrokeWidthAttributeName: 3
+        NSStrokeWidthAttributeName: -5.0,
     ]
     
     override func viewDidLoad() {
@@ -28,11 +28,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topTextField.delegate = self
         bottomTextField.delegate = self
         
-        topTextField.textAlignment = .center
-        bottomTextField.textAlignment = .center
+        //topTextField.textAlignment = .center
+        //bottomTextField.textAlignment = .center
         
-        topTextField.backgroundColor = UIColor.clear
-        bottomTextField.backgroundColor = UIColor.clear
+        //topTextField.backgroundColor = UIColor.clear
+        //bottomTextField.backgroundColor = UIColor.clear
         
         topTextField.defaultTextAttributes = memeTextAttributes
         bottomTextField.defaultTextAttributes = memeTextAttributes
@@ -117,7 +117,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
     }
-    
     
     
     @IBAction func shareImage(_ sender: UIBarButtonItem) {
