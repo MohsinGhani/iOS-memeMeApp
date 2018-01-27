@@ -28,14 +28,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topTextField.delegate = self
         bottomTextField.delegate = self
         
-        //topTextField.textAlignment = .center
-        //bottomTextField.textAlignment = .center
         
         //topTextField.backgroundColor = UIColor.clear
         //bottomTextField.backgroundColor = UIColor.clear
         
         topTextField.defaultTextAttributes = memeTextAttributes
         bottomTextField.defaultTextAttributes = memeTextAttributes
+        
+        topTextField.textAlignment = .center
+        bottomTextField.textAlignment = .center
         
     }
     
