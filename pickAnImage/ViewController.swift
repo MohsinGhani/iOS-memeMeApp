@@ -142,6 +142,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return memedImage
     }
     
+    @IBAction func cancelButton(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
