@@ -12,6 +12,7 @@ class TableViewCell: UITableViewCell {
 
     @IBOutlet weak var memeImageView: UIImageView!
     @IBOutlet weak var memeText: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

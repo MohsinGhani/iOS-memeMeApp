@@ -125,6 +125,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
         let vc = UIActivityViewController(activityItems: [topTextField.text!,bottomTextField.text!, memedImage], applicationActivities: nil)
         present(vc, animated: true, completion: nil)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.memes.append(memedImage)
+        print("added meme in array")
     }
     
     func generateMemedImage() -> UIImage {
