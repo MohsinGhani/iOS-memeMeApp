@@ -57,7 +57,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQG-Vd-lOk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Uo7-4V-dq0"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="TABLE VIEW" id="LO7-vA-v3h">
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xx3-Gg-lkj">
@@ -69,25 +72,25 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wYd-Dr-wPK">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wYd-Dr-wPK">
+                                <rect key="frame" x="0.0" y="60" width="375" height="558"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableCell" rowHeight="70" id="YHK-nj-Kwv" customClass="TableViewCell" customModule="pickAnImage" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableCell" rowHeight="100" id="YHK-nj-Kwv" customClass="TableViewCell" customModule="pickAnImage" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YHK-nj-Kwv" id="YFj-pq-Lu5">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="26O-Yn-wju">
-                                                    <rect key="frame" x="10" y="0.0" width="70" height="69.5"/>
+                                                    <rect key="frame" x="10" y="0.0" width="100" height="99.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="70" id="pHP-12-8J0"/>
+                                                        <constraint firstAttribute="width" constant="100" id="pHP-12-8J0"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here We wiill write text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08w-5j-PY1">
-                                                    <rect key="frame" x="95" y="24" width="174" height="21"/>
+                                                    <rect key="frame" x="125" y="39.5" width="174" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -116,8 +119,8 @@
                             <constraint firstItem="UQG-Vd-lOk" firstAttribute="leading" secondItem="wWf-wt-fbZ" secondAttribute="leading" id="Wlb-Pc-E2g"/>
                             <constraint firstItem="P62-ib-kn7" firstAttribute="top" secondItem="wYd-Dr-wPK" secondAttribute="bottom" id="XOO-C1-JkJ"/>
                             <constraint firstAttribute="trailing" secondItem="UQG-Vd-lOk" secondAttribute="trailing" id="YWt-2y-f4X"/>
-                            <constraint firstItem="wYd-Dr-wPK" firstAttribute="centerY" secondItem="wWf-wt-fbZ" secondAttribute="centerY" constant="-2.5" id="i3Z-xo-EpT"/>
                             <constraint firstItem="wYd-Dr-wPK" firstAttribute="leading" secondItem="wWf-wt-fbZ" secondAttribute="leading" id="qkg-SR-qgu"/>
+                            <constraint firstItem="wYd-Dr-wPK" firstAttribute="top" secondItem="UQG-Vd-lOk" secondAttribute="bottom" id="yJO-7d-3wD"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Table View" id="J61-qe-WU4"/>
