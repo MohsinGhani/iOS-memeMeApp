@@ -16,6 +16,7 @@
 		42BEA86F2014D1CC007BF3A5 /* pickAnImageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BEA86E2014D1CC007BF3A5 /* pickAnImageUITests.swift */; };
 		42C5F121202013480010D28B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5F120202013480010D28B /* TableViewController.swift */; };
 		42C5F123202013C00010D28B /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5F122202013C00010D28B /* GridViewController.swift */; };
+		42C5F1252020262D0010D28B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5F1242020262D0010D28B /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		42BEA8702014D1CC007BF3A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42C5F120202013480010D28B /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		42C5F122202013C00010D28B /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		42C5F1242020262D0010D28B /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				42BEA84E2014D1CC007BF3A5 /* AppDelegate.swift */,
 				42C5F120202013480010D28B /* TableViewController.swift */,
+				42C5F1242020262D0010D28B /* TableViewCell.swift */,
 				42C5F122202013C00010D28B /* GridViewController.swift */,
 				42BEA8502014D1CC007BF3A5 /* ViewController.swift */,
 				42BEA8522014D1CC007BF3A5 /* Main.storyboard */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42C5F1252020262D0010D28B /* TableViewCell.swift in Sources */,
 				42C5F123202013C00010D28B /* GridViewController.swift in Sources */,
 				42BEA8512014D1CC007BF3A5 /* ViewController.swift in Sources */,
 				42BEA84F2014D1CC007BF3A5 /* AppDelegate.swift in Sources */,

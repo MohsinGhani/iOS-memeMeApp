@@ -69,9 +69,44 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wYd-Dr-wPK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wYd-Dr-wPK">
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableCell" rowHeight="70" id="YHK-nj-Kwv" customClass="TableViewCell" customModule="pickAnImage" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YHK-nj-Kwv" id="YFj-pq-Lu5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="26O-Yn-wju">
+                                                    <rect key="frame" x="10" y="0.0" width="70" height="69.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="pHP-12-8J0"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here We wiill write text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08w-5j-PY1">
+                                                    <rect key="frame" x="95" y="24" width="174" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="08w-5j-PY1" firstAttribute="leading" secondItem="26O-Yn-wju" secondAttribute="trailing" constant="15" id="10K-fv-ghy"/>
+                                                <constraint firstItem="26O-Yn-wju" firstAttribute="top" secondItem="YFj-pq-Lu5" secondAttribute="top" id="LH8-dm-V89"/>
+                                                <constraint firstAttribute="bottom" secondItem="26O-Yn-wju" secondAttribute="bottom" id="X1b-aK-iNi"/>
+                                                <constraint firstItem="08w-5j-PY1" firstAttribute="centerY" secondItem="YFj-pq-Lu5" secondAttribute="centerY" id="cwh-XD-X9G"/>
+                                                <constraint firstItem="26O-Yn-wju" firstAttribute="leading" secondItem="YFj-pq-Lu5" secondAttribute="leading" constant="10" id="zCT-mp-OiZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="memeImageView" destination="26O-Yn-wju" id="sN2-zl-M8Z"/>
+                                            <outlet property="memeText" destination="08w-5j-PY1" id="e20-AV-gpy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
