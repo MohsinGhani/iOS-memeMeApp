@@ -13,7 +13,7 @@
         <!--Grid View-->
         <scene sceneID="YA7-1s-yy7">
             <objects>
-                <viewController id="Q7s-xV-Vqe" sceneMemberID="viewController">
+                <viewController id="Q7s-xV-Vqe" customClass="GridViewController" customModule="pickAnImage" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qf4-IL-WK1"/>
                         <viewControllerLayoutGuide type="bottom" id="lW8-fC-ErW"/>
@@ -47,7 +47,7 @@
         <!--Table View-->
         <scene sceneID="phY-99-4Ds">
             <objects>
-                <viewController id="pv9-eI-ctC" sceneMemberID="viewController">
+                <viewController id="pv9-eI-ctC" customClass="TableViewController" customModule="pickAnImage" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AzW-Sc-Jpg"/>
                         <viewControllerLayoutGuide type="bottom" id="P62-ib-kn7"/>
@@ -56,12 +56,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UQG-Vd-lOk">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQG-Vd-lOk">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="TABLE VIEW" id="LO7-vA-v3h">
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xx3-Gg-lkj">
+                                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-5" maxY="0.0"/>
                                             <connections>
                                                 <segue destination="BYZ-38-t0r" kind="presentation" id="1Vz-v6-rdJ"/>
                                             </connections>
@@ -69,10 +69,26 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wYd-Dr-wPK">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wYd-Dr-wPK" secondAttribute="trailing" id="BQ0-TS-L9K"/>
+                            <constraint firstItem="UQG-Vd-lOk" firstAttribute="top" secondItem="wWf-wt-fbZ" secondAttribute="top" id="F2N-OU-WW2"/>
+                            <constraint firstItem="UQG-Vd-lOk" firstAttribute="leading" secondItem="wWf-wt-fbZ" secondAttribute="leading" id="Wlb-Pc-E2g"/>
+                            <constraint firstItem="P62-ib-kn7" firstAttribute="top" secondItem="wYd-Dr-wPK" secondAttribute="bottom" id="XOO-C1-JkJ"/>
+                            <constraint firstAttribute="trailing" secondItem="UQG-Vd-lOk" secondAttribute="trailing" id="YWt-2y-f4X"/>
+                            <constraint firstItem="wYd-Dr-wPK" firstAttribute="centerY" secondItem="wWf-wt-fbZ" secondAttribute="centerY" constant="-2.5" id="i3Z-xo-EpT"/>
+                            <constraint firstItem="wYd-Dr-wPK" firstAttribute="leading" secondItem="wWf-wt-fbZ" secondAttribute="leading" id="qkg-SR-qgu"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Table View" id="J61-qe-WU4"/>
+                    <connections>
+                        <outlet property="tableView" destination="wYd-Dr-wPK" id="vko-2D-DsI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woI-c1-AwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -206,13 +222,14 @@
             </objects>
             <point key="canvasLocation" x="1127" y="-188"/>
         </scene>
-        <!--Item-->
+        <!--Table View-->
         <scene sceneID="OBn-Hl-70m">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Zfd-T6-lu2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="e83-ER-wZH"/>
+                    <tabBarItem key="tabBarItem" title="Table View" id="e83-ER-wZH"/>
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="wAS-Eb-KZT">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -224,13 +241,14 @@
             </objects>
             <point key="canvasLocation" x="-802.39999999999998" y="-515.8920539730135"/>
         </scene>
-        <!--Item-->
+        <!--Gride View-->
         <scene sceneID="CXk-cK-Dv4">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="E9g-CS-8Nb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="79M-AZ-cwf"/>
+                    <tabBarItem key="tabBarItem" title="Gride View" id="79M-AZ-cwf"/>
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="dDX-Ao-GZJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -249,6 +267,6 @@
         <image name="share" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="s6W-kc-fuh"/>
+        <segue reference="1Vz-v6-rdJ"/>
     </inferredMetricsTieBreakers>
 </document>

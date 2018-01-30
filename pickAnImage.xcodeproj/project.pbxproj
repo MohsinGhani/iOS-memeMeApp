@@ -14,6 +14,8 @@
 		42BEA8592014D1CC007BF3A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42BEA8572014D1CC007BF3A5 /* LaunchScreen.storyboard */; };
 		42BEA8642014D1CC007BF3A5 /* pickAnImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BEA8632014D1CC007BF3A5 /* pickAnImageTests.swift */; };
 		42BEA86F2014D1CC007BF3A5 /* pickAnImageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BEA86E2014D1CC007BF3A5 /* pickAnImageUITests.swift */; };
+		42C5F121202013480010D28B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5F120202013480010D28B /* TableViewController.swift */; };
+		42C5F123202013C00010D28B /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5F122202013C00010D28B /* GridViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		42BEA86A2014D1CC007BF3A5 /* pickAnImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pickAnImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42BEA86E2014D1CC007BF3A5 /* pickAnImageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickAnImageUITests.swift; sourceTree = "<group>"; };
 		42BEA8702014D1CC007BF3A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42C5F120202013480010D28B /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		42C5F122202013C00010D28B /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				42BEA84E2014D1CC007BF3A5 /* AppDelegate.swift */,
+				42C5F120202013480010D28B /* TableViewController.swift */,
+				42C5F122202013C00010D28B /* GridViewController.swift */,
 				42BEA8502014D1CC007BF3A5 /* ViewController.swift */,
 				42BEA8522014D1CC007BF3A5 /* Main.storyboard */,
 				42BEA8552014D1CC007BF3A5 /* Assets.xcassets */,
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42C5F123202013C00010D28B /* GridViewController.swift in Sources */,
 				42BEA8512014D1CC007BF3A5 /* ViewController.swift in Sources */,
 				42BEA84F2014D1CC007BF3A5 /* AppDelegate.swift in Sources */,
+				42C5F121202013480010D28B /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +515,7 @@
 				42BEA8752014D1CC007BF3A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42BEA8762014D1CC007BF3A5 /* Build configuration list for PBXNativeTarget "pickAnImageTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +524,7 @@
 				42BEA8782014D1CC007BF3A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42BEA8792014D1CC007BF3A5 /* Build configuration list for PBXNativeTarget "pickAnImageUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +533,7 @@
 				42BEA87B2014D1CC007BF3A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
