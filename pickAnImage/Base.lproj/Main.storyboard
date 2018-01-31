@@ -83,7 +83,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="26O-Yn-wju">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="26O-Yn-wju">
                                                     <rect key="frame" x="10" y="0.0" width="100" height="99.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="pHP-12-8J0"/>
@@ -162,7 +162,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Wh-Vz-0uQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Wh-Vz-0uQ">
                                 <rect key="frame" x="0.0" y="44" width="375" height="579"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -253,6 +253,9 @@
                         <outlet property="bottomTextField" destination="RVA-2W-TWm" id="V4n-A2-9ir"/>
                         <outlet property="cameraButton" destination="QH8-zb-ui7" id="iiL-9L-cbP"/>
                         <outlet property="imagePickerView" destination="4Wh-Vz-0uQ" id="ITd-nu-AGh"/>
+                        <outlet property="nav" destination="MFD-HU-7l3" id="aoN-gn-CJy"/>
+                        <outlet property="shareBtn" destination="fLF-A3-Wj5" id="yJ1-wH-UAT"/>
+                        <outlet property="toolbar" destination="TMV-Sp-TqH" id="Twl-Jc-fXH"/>
                         <outlet property="topTextField" destination="7a7-Vl-QEp" id="uBv-Sx-C1O"/>
                     </connections>
                 </viewController>

@@ -8,11 +8,18 @@
 
 import UIKit
 
+struct Meme {
+    var memedImage: UIImage,
+    topText: String,
+    bottomText: String,
+    orignalImage: UIImage
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    var memes = [UIImage]()
+    var memes = [Meme]()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

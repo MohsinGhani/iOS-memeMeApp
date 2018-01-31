@@ -11,7 +11,7 @@ import UIKit
 class TableViewController: UIViewController,UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet weak var tableView: UITableView!
-    var memes = [UIImage]()
+    var memes = [Meme]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +39,8 @@ class TableViewController: UIViewController,UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell") as! TableViewCell
-        cell.memeText?.text = "My New Meme Here"
-        cell.memeImageView.image = memes[indexPath.row]
+        cell.memeText?.text = "\(memes[indexPath.row].topText) \(memes[indexPath.row].bottomText)"
+        cell.memeImageView.image = memes[indexPath.row].memedImage
         return cell;
         // let cell = UITableViewCell()
         // cell.textLabel?.text = "Mohsin Ghani"

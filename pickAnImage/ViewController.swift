@@ -14,6 +14,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
+    @IBOutlet weak var nav: UINavigationBar!
+    @IBOutlet weak var toolbar: UIToolbar!
+    @IBOutlet weak var shareBtn: UIBarButtonItem!
 
     let memeTextAttributes:[String:Any] = [
         NSStrokeColorAttributeName: UIColor.black,
@@ -24,6 +27,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.shareBtn.isEnabled = false
         
         topTextField.delegate = self
         bottomTextField.delegate = self
@@ -43,6 +47,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        
+        if (self.imagePickerView.image != nil) {
+            self.shareBtn.isEnabled = true
+        }
+        print("viewWillAppear")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -90,7 +99,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func keyboardWillHide(_ notification:Notification) {
-        print("step#3 keyboardWillHide")
+        // print("step#3 keyboardWillHide")
         view.frame.origin.y = 0
     }
     
@@ -126,14 +135,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let vc = UIActivityViewController(activityItems: [topTextField.text!,bottomTextField.text!, memedImage], applicationActivities: nil)
         present(vc, animated: true, completion: nil)
         
+        let newMeme = Meme(memedImage:memedImage, topText: topTextField.text!, bottomText: bottomTextField.text!, orignalImage: self.imagePickerView.image!)
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.memes.append(memedImage)
-        print("added meme in array")
+        appDelegate.memes.append(newMeme)
+        // print("added meme in array")
     }
     
     func generateMemedImage() -> UIImage {
         
-        // TODO: Hide toolbar and navbar
+        // Hide toolbar and navbar
+        self.nav.isHidden = true
+        self.toolbar.isHidden = true
 
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -141,7 +154,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        // TODO: Show toolbar and navbar
+        // Show toolbar and navbar
+        self.nav.isHidden = false
+        self.toolbar.isHidden = false
         
         return memedImage
     }
