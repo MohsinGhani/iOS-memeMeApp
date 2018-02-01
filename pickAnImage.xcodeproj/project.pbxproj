@@ -17,6 +17,7 @@
 		42C5F121202013480010D28B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5F120202013480010D28B /* TableViewController.swift */; };
 		42C5F123202013C00010D28B /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5F122202013C00010D28B /* GridViewController.swift */; };
 		42C5F1252020262D0010D28B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5F1242020262D0010D28B /* TableViewCell.swift */; };
+		42F249672022B27300789AFD /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F249662022B27300789AFD /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		42C5F120202013480010D28B /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		42C5F122202013C00010D28B /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 		42C5F1242020262D0010D28B /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		42F249662022B27300789AFD /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				42C5F120202013480010D28B /* TableViewController.swift */,
 				42C5F1242020262D0010D28B /* TableViewCell.swift */,
 				42C5F122202013C00010D28B /* GridViewController.swift */,
+				42F249662022B27300789AFD /* CollectionViewCell.swift */,
 				42BEA8502014D1CC007BF3A5 /* ViewController.swift */,
 				42BEA8522014D1CC007BF3A5 /* Main.storyboard */,
 				42BEA8552014D1CC007BF3A5 /* Assets.xcassets */,
@@ -270,6 +273,7 @@
 			files = (
 				42C5F1252020262D0010D28B /* TableViewCell.swift in Sources */,
 				42C5F123202013C00010D28B /* GridViewController.swift in Sources */,
+				42F249672022B27300789AFD /* CollectionViewCell.swift in Sources */,
 				42BEA8512014D1CC007BF3A5 /* ViewController.swift in Sources */,
 				42BEA84F2014D1CC007BF3A5 /* AppDelegate.swift in Sources */,
 				42C5F121202013480010D28B /* TableViewController.swift in Sources */,
