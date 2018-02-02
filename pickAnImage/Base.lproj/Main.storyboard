@@ -86,6 +86,7 @@
                     <tabBarItem key="tabBarItem" title="Grid View" id="FB6-3N-Zrs"/>
                     <connections>
                         <outlet property="collectionView" destination="HpL-N8-hbd" id="8uB-Wj-vD9"/>
+                        <segue destination="X8E-BW-qa0" kind="show" identifier="previewImage" id="vFa-yi-9Hh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xN-m6-pwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -114,7 +115,7 @@
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xx3-Gg-lkj">
                                             <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-5" maxY="0.0"/>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" id="1Vz-v6-rdJ"/>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="createMeme" id="K5T-gO-GrL"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -174,6 +175,7 @@
                     <tabBarItem key="tabBarItem" title="Table View" id="J61-qe-WU4"/>
                     <connections>
                         <outlet property="tableView" destination="wYd-Dr-wPK" id="vko-2D-DsI"/>
+                        <segue destination="X8E-BW-qa0" kind="show" identifier="previewImage" id="z2H-Oa-e5e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woI-c1-AwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -201,7 +203,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pickAnImage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="memeController" id="BYZ-38-t0r" customClass="ViewController" customModule="pickAnImage" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -309,7 +311,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1127" y="-188"/>
+            <point key="canvasLocation" x="1185" y="53"/>
+        </scene>
+        <!--Preview Image Controller-->
+        <scene sceneID="0wR-UM-yRA">
+            <objects>
+                <viewController storyboardIdentifier="previewImage" id="X8E-BW-qa0" customClass="previewImageController" customModule="pickAnImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="asB-Qa-AFd"/>
+                        <viewControllerLayoutGuide type="bottom" id="kla-2S-GDB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wfD-za-Wxa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gsp-aL-9GX">
+                                <rect key="frame" x="16" y="50" width="343" height="568"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9VK-Sq-Y9O">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cgd-7c-PNV"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="FKf-Se-Ezb">
+                                        <barButtonItem key="leftBarButtonItem" title="Edit" id="5Jx-Hn-1ND">
+                                            <connections>
+                                                <action selector="editMeme:" destination="X8E-BW-qa0" id="1I8-vc-Ken"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="V8v-z4-xK2">
+                                            <connections>
+                                                <action selector="cancle:" destination="X8E-BW-qa0" id="aW0-Xa-chC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9VK-Sq-Y9O" firstAttribute="top" secondItem="wfD-za-Wxa" secondAttribute="top" id="1ea-eg-yI7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gsp-aL-9GX" secondAttribute="trailing" id="7Ef-TC-SWN"/>
+                            <constraint firstItem="kla-2S-GDB" firstAttribute="top" secondItem="gsp-aL-9GX" secondAttribute="bottom" id="9Mu-v1-xDu"/>
+                            <constraint firstItem="9VK-Sq-Y9O" firstAttribute="leading" secondItem="wfD-za-Wxa" secondAttribute="leading" id="Eax-O3-2ID"/>
+                            <constraint firstItem="gsp-aL-9GX" firstAttribute="top" secondItem="9VK-Sq-Y9O" secondAttribute="bottom" id="K64-A3-ZTJ"/>
+                            <constraint firstItem="gsp-aL-9GX" firstAttribute="leading" secondItem="wfD-za-Wxa" secondAttribute="leadingMargin" id="cbz-M6-5pQ"/>
+                            <constraint firstAttribute="trailing" secondItem="9VK-Sq-Y9O" secondAttribute="trailing" id="jfR-cz-smJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="gsp-aL-9GX" id="n51-Sb-x0M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="giM-LH-C80" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1185" y="-761"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OBn-Hl-70m">
@@ -362,6 +419,7 @@
         <image name="table" width="16" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="vFa-yi-9Hh"/>
         <segue reference="s6W-kc-fuh"/>
     </inferredMetricsTieBreakers>
 </document>

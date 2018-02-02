@@ -12,7 +12,7 @@ class TableViewController: UIViewController,UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
     var memes = [Meme]()
-    
+    var selectedIndex = 0;
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -46,6 +46,19 @@ class TableViewController: UIViewController,UITableViewDelegate, UITableViewData
         // cell.textLabel?.text = "Mohsin Ghani"
         // return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedIndex = indexPath.row
+        performSegue(withIdentifier: "previewImage", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "previewImage" {
+            let destinationViewController = segue.destination as! previewImageController;
+            destinationViewController.meme.append(self.memes[self.selectedIndex])
+        }
+    }
+    
 
     
 

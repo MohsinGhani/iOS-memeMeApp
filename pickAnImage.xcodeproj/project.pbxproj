@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		425179212024DF7600D33CD9 /* previewImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425179202024DF7600D33CD9 /* previewImageController.swift */; };
 		42BEA84F2014D1CC007BF3A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BEA84E2014D1CC007BF3A5 /* AppDelegate.swift */; };
 		42BEA8512014D1CC007BF3A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BEA8502014D1CC007BF3A5 /* ViewController.swift */; };
 		42BEA8542014D1CC007BF3A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42BEA8522014D1CC007BF3A5 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		425179202024DF7600D33CD9 /* previewImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = previewImageController.swift; sourceTree = "<group>"; };
 		42BEA84B2014D1CC007BF3A5 /* pickAnImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pickAnImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42BEA84E2014D1CC007BF3A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42BEA8502014D1CC007BF3A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				42BEA8552014D1CC007BF3A5 /* Assets.xcassets */,
 				42BEA8572014D1CC007BF3A5 /* LaunchScreen.storyboard */,
 				42BEA85A2014D1CC007BF3A5 /* Info.plist */,
+				425179202024DF7600D33CD9 /* previewImageController.swift */,
 			);
 			path = pickAnImage;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			files = (
 				42C5F1252020262D0010D28B /* TableViewCell.swift in Sources */,
 				42C5F123202013C00010D28B /* GridViewController.swift in Sources */,
+				425179212024DF7600D33CD9 /* previewImageController.swift in Sources */,
 				42F249672022B27300789AFD /* CollectionViewCell.swift in Sources */,
 				42BEA8512014D1CC007BF3A5 /* ViewController.swift in Sources */,
 				42BEA84F2014D1CC007BF3A5 /* AppDelegate.swift in Sources */,

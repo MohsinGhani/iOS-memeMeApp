@@ -12,6 +12,7 @@ class GridViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     @IBOutlet weak var collectionView: UICollectionView!
     var memes = [Meme]()
+    var selectedIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
@@ -49,6 +50,17 @@ class GridViewController: UIViewController, UICollectionViewDataSource, UICollec
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedIndex = indexPath.row
+        performSegue(withIdentifier: "previewImage", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "previewImage" {
+            let destinationViewController = segue.destination as! previewImageController;
+            destinationViewController.meme.append(self.memes[self.selectedIndex])
+        }
+    }
     
     
 
