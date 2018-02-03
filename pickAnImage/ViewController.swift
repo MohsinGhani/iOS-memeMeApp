@@ -32,7 +32,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topTextField.delegate = self
         bottomTextField.delegate = self
         
-        
         //topTextField.backgroundColor = UIColor.clear
         //bottomTextField.backgroundColor = UIColor.clear
         
@@ -51,7 +50,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if (self.imagePickerView.image != nil) {
             self.shareBtn.isEnabled = true
         }
-        print("viewWillAppear")
+        // print("viewWillAppear")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
