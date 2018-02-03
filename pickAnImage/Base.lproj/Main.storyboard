@@ -410,6 +410,7 @@
                         <outlet property="cameraButton" destination="WTr-U2-Nfn" id="nTP-MB-5nq"/>
                         <outlet property="editBtn" destination="5Jx-Hn-1ND" id="Trs-Lk-8ff"/>
                         <outlet property="imageView" destination="gsp-aL-9GX" id="n51-Sb-x0M"/>
+                        <outlet property="nav" destination="9VK-Sq-Y9O" id="WAE-z3-Zky"/>
                         <outlet property="toolbar" destination="bFZ-UE-F9N" id="Mp1-MH-J3B"/>
                         <outlet property="topTextField" destination="Ia1-Tx-daY" id="kAk-x6-7P8"/>
                     </connections>

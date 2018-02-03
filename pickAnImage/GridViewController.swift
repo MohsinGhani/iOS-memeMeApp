@@ -55,10 +55,12 @@ class GridViewController: UIViewController, UICollectionViewDataSource, UICollec
         performSegue(withIdentifier: "previewImage", sender: self)
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "previewImage" {
             let destinationViewController = segue.destination as! previewImageController;
-            destinationViewController.meme.append(self.memes[self.selectedIndex])
+            // destinationViewController.meme.append(self.memes[self.selectedIndex])
+            destinationViewController.editMemeIndex = self.selectedIndex
         }
     }
     

@@ -52,10 +52,20 @@ class TableViewController: UIViewController,UITableViewDelegate, UITableViewData
         performSegue(withIdentifier: "previewImage", sender: self)
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.memes.remove(at: indexPath.row)
+            self.memes.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "previewImage" {
             let destinationViewController = segue.destination as! previewImageController;
-            destinationViewController.meme.append(self.memes[self.selectedIndex])
+            // destinationViewController.meme.append(self.memes[self.selectedIndex])
+            destinationViewController.editMemeIndex = self.selectedIndex
         }
     }
     

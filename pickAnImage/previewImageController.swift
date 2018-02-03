@@ -16,6 +16,7 @@ class previewImageController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var nav: UINavigationBar!
     
     let memeTextAttributes:[String:Any] = [
         NSStrokeColorAttributeName: UIColor.black,
@@ -26,15 +27,18 @@ class previewImageController: UIViewController, UIImagePickerControllerDelegate,
     
     var meme = [Meme]()
     var editMode = false
-    
+    var editMemeIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         topTextField.isHidden = true
         bottomTextField.isHidden = true
         toolbar.isHidden = true;
         editBtn.title = "Edit";
-
-        self.imageView.image = self.meme[0].memedImage
+        
+        // self.imageView.image = self.meme[0].memedImage
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.meme = [appDelegate.memes[editMemeIndex]]
+        self.imageView.image = appDelegate.memes[editMemeIndex].memedImage
         
         topTextField.delegate = self
         bottomTextField.delegate = self
@@ -44,6 +48,10 @@ class previewImageController: UIViewController, UIImagePickerControllerDelegate,
         
         topTextField.textAlignment = .center
         bottomTextField.textAlignment = .center
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
     }
 
@@ -62,22 +70,23 @@ class previewImageController: UIViewController, UIImagePickerControllerDelegate,
             topTextField.isHidden = false
             bottomTextField.isHidden = false
             toolbar.isHidden = false;
-            
             topTextField?.text = self.meme[0].topText
             bottomTextField?.text = self.meme[0].bottomText
-            
             imageView.image = self.meme[0].orignalImage
             editMode = true
+            print("editMode = \(editMode)")
         }
         else{
+            updateMeme()
             self.editBtn.title = "Edit"
-            
             topTextField.isHidden = true
             bottomTextField.isHidden = true
             toolbar.isHidden = true;
             
-            imageView.image = self.meme[0].memedImage
+            // imageView.image = self.meme[0].memedImage
             editMode = false
+            
+            print("editMode = \(editMode)")
         }
     }
     
@@ -88,6 +97,7 @@ class previewImageController: UIViewController, UIImagePickerControllerDelegate,
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         imageView.image = selectedImage
+        self.meme[0].orignalImage = selectedImage
         print("pick image success")
         dismiss(animated: true, completion: nil)
     }
@@ -100,5 +110,33 @@ class previewImageController: UIViewController, UIImagePickerControllerDelegate,
         present(imagePicker, animated: true, completion: nil)
     }
     
+    func updateMeme() {
+        let memedImage = generateMemedImage()
+        imageView.image = memedImage
+        
+        let newMeme = Meme(memedImage:memedImage, topText: topTextField.text!, bottomText: bottomTextField.text!, orignalImage: self.meme[0].orignalImage)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.memes[editMemeIndex] = newMeme
+    }
+    
+    func generateMemedImage() -> UIImage {
+        
+        // Hide toolbar and navbar
+        self.nav.isHidden = true
+        self.toolbar.isHidden = true
+        
+        // Render view to an image
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        // Show toolbar and navbar
+        self.nav.isHidden = false
+        self.toolbar.isHidden = false
+        
+        return memedImage
+    }
 
 }
